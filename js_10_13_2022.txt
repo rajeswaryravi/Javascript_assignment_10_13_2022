@@ -1,0 +1,194 @@
+Quiz
+----------------------------------
+
+1. [3, 6, 9, 12, 15]
+2. [8,6,7,9]
+3. [ 'J', 'v' ]
+4. 2019-5-9 15:02:35
+
+
+ASSIGNMENTS
+-------------------------------------------
+-------------------------------------------
+	1
+-------------------------------------------
+
+class Shape {
+    constructor(name, sides, sideLength) {
+        this.name = name;
+        this.sides = sides;
+        this.sideLength = sideLength;
+    };
+}
+class Square extends Shape {
+    constructor(sideLength) {
+            super("square", 4, sideLength);
+    }
+  calcPerimeter() {
+      return (this.sideLength * 4);
+   }
+}
+class Triangle extends Shape {
+    constructor(sideLength) {
+     super("Triangle", 3, sideLength);
+ }
+   calcPerimeter() {
+        return (this.sides * 3);
+    }
+}
+let square = new Square(5);
+console.log("Name:" +""+square.name);
+console.log("Sides:"+""+square.sides);
+console.log("Perimeter:"+""+square.calcPerimeter());
+
+let triangle = new Triangle(3);
+console.log("Name:" +""+triangle.name);
+console.log("Sides:"+""+triangle.sides);
+console.log("Perimeter:"+""+triangle.calcPerimeter());
+
+
+
+	2
+----------------------------------------------------
+
+class EmployeeInfo{
+    static showAllEmployeeDetails(){
+        console.log("Details Of All the Employee");
+        console.log("ID\tName\tDept\tDesg\tSal");
+        for(let i=0;i<this.employees.length;i++){
+            console.log(this.employees[i].id+"\t"+this.employees[i].name+"\t"+
+		this.employees[i].desg+"\t"+this.employees[i].dept+"\t"+
+			this.employees[i].mstatus+"\t"+this.employees[i].doj+"\t");
+        }
+    }
+    static employees = [];
+    static addEmployee(employee){
+        this.employees.push(employee);
+    }
+    showDetails(){
+        console.log("Details Of the Employee");
+        console.log("-----------------------");
+        console.log("ID :"+this.id);
+        console.log("Name :"+this.name);
+        console.log("Designation :"+this.desg);
+        console.log("Department :"+this.dept);
+        console.log("Marriage Status :"+this.mstatus);
+        console.log("Date of Joining :"+this.doj);
+    }
+   swipeIn(){
+        console.log("Id: "+this.id+ " Name :"+this.name+ " Departmenyt :"+this.dept);
+    }
+    constructor(id1,name1,desg1,dept1,mstatus1,doj1){
+        this.id=id1;
+        this.name=name1;
+        this.desg = desg1;
+        this.dept = dept1;
+        this.mstatus = mstatus1;
+        this.doj = doj1;
+      }
+}
+const employee1 = new EmployeeInfo(1,'aaa','PA','Testing','Not Married','01/01/2018');
+const employee2 = new EmployeeInfo(2,'bbb','A','Developer','Married','01/01/2017');
+const employee3 = new EmployeeInfo(3,'ccc','SA','HR','Not Married','01/01/2016');
+const employee4 = new EmployeeInfo(4,'ddd','M','Developer','Married','01/01/2015');
+const employee5 = new EmployeeInfo(5,'eee','SM','Testing','Not Married','01/01/2014');
+
+
+EmployeeInfo.addEmployee(employee1);
+EmployeeInfo.addEmployee(employee2);
+EmployeeInfo.addEmployee(employee3);
+EmployeeInfo.addEmployee(employee4);
+EmployeeInfo.addEmployee(employee5);
+
+EmployeeInfo.showAllEmployeeDetails();
+
+employee1.swipeIn();
+employee2.swipeIn();
+employee3.swipeIn();
+employee4.swipeIn();
+employee5.swipeIn();
+
+
+
+	5
+------------------------------------------------------
+
+//length of striing
+let text = "Javascript";
+let length = text.length;
+console.log(length);
+
+// Escape Character
+let text1 = "JavaScript is the \"programming\" language of the Web.";
+console.log(text1);
+
+let text2 = "JavaScript is the \'programming\' language of the Web.";
+console.log(text2);
+
+let text3 = "JavaScript\'s is the programming language of the Web.";
+console.log(text3);
+
+let text4 = "JavaScript is the \\programming language of the Web.";
+console.log(text4);
+
+let text5 = "JavaScript is the \n programming language of the Web.";
+console.log(text5);
+
+// String as object
+
+let x = "John";        // x is a string
+let y = new String("John");  // y is an object
+console.log(x===y);
+
+let xx = "John";       
+let yy = new String("John"); 
+console.log(xx==yy);
+
+
+// Extracting string
+let str = "Apple, Banana, Kiwi";
+console.log(str.slice(7,13)); 
+
+let str1 = "Apple, Orange, Banana, Kiwi";
+console.log(str.substring(7,22)); 
+
+let str2 = "Apple, Orange, Banana, Kiwi";
+console.log(str.substr(0,5)); 
+
+//Replacing String Content
+let text6 = "Javascript is a programming language";
+let newText = text6.replace("Javascript", "JS");
+console.log(newText); 
+
+//uppercase and lowercase
+
+let text7 = "Hello World!";
+console.log(text8 = text7.toUpperCase());
+
+
+let text9 = "HELLO";
+console.log(text10 = text9.toLowerCase());
+
+// concat
+
+let text11 = "Hello";
+let text12 = "World";
+console.log(text13 = text11.concat(" ", text12));
+
+//trim
+
+let text14 = "      Hello World!      ";
+console.log(text15 = text14.trim());
+
+let text16 = "      Hello World!      ";
+console.log(text17 = text16.trimStart());
+
+let text18 = "      Hello World!      ";
+console.log(text19 = text18.trimEnd());
+
+
+// Date Object
+console.log(new Date());
+console.log(new Date(2018, 11, 24, 10, 33, 30, 0));
+console.log(new Date("October 13, 2014 11:13:00"));
+console.log(new Date(100000000000));
